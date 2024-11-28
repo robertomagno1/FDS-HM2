@@ -21,9 +21,16 @@ def fit(model, x : np.array, y : np.array, x_val:np.array = None, y_val:np.array
 
     for it in range(num_steps):
         ##############################
+        ## Compute predictions on the training data
         preds = model.predict(x)
+
+        ## Compute the gradient of the loss with respect to the model parameters
         gradient = model.compute_gradient(x, y, preds)
+
+        ## Update the model parameters using the computed gradient and the specified learning rate
         model.update_theta(gradient, lr=lr)
+
+        ## Calculate the training log-likelihood and store it in the history
         likelihood_history[it] = model.likelihood(preds, y)
         ##############################
         if x_val is not None and y_val is not None:
@@ -31,4 +38,5 @@ def fit(model, x : np.array, y : np.array, x_val:np.array = None, y_val:np.array
             val_loss_history[it] = - model.likelihood(val_preds, y_val)
 
     return likelihood_history, val_loss_history
+
 
