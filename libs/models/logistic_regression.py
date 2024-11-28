@@ -1,5 +1,8 @@
 import numpy as np
-from libs.math import sigmoid
+from libs.libs_math import sigmoid
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
 class LogisticRegression:
     def __init__(self, num_features : int):

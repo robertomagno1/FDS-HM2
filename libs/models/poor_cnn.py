@@ -1,5 +1,3 @@
-import torch
-
 import torch.nn as nn
 
 class PoorPerformingCNN(nn.Module):  # Correct inheritance from nn.Module
