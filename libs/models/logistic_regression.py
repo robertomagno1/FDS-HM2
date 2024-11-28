@@ -19,6 +19,8 @@ class LogisticRegression:
             preds: the predictions of the input features.
         """
         ##############################
+        # Compute predictions by taking the dot product of input data (x) and model parameters,
+        # followed by applying the sigmoid function to squash values into the range [0, 1].
         preds = sigmoid(np.dot(x, self.parameters))
         ##############################
         return preds
@@ -36,6 +38,8 @@ class LogisticRegression:
             log_l: the log likelihood of the model parameters according to data x and label y.
         """
         ##############################
+        # Compute the log-likelihood for binary classification using the cross-entropy formula.
+        # A small value (1e-15) is added to avoid log(0) errors.
         log_l = np.mean(y * np.log(preds + 1e-15) + (1 - y) * np.log(1 - preds + 1e-15))
         ##############################
         return log_l
@@ -51,7 +55,9 @@ class LogisticRegression:
         Returns:
             None
         """
-        ##############################  
+        ############################## 
+        # Update parameters using gradient ascent: 
+        # Increase parameters in the direction of the gradient scaled by the learning rate.
         self.parameters += lr * gradient
         ##############################
         pass
@@ -70,6 +76,8 @@ class LogisticRegression:
             gradient: the gradient of the log likelihood.
         """
         ##############################
+        # Compute the gradient as the average error between predicted and true labels,
+        # weighted by the input data.
         gradient = np.dot(x.T, (y - preds)) / x.shape[0]
         ##############################
         return gradient
