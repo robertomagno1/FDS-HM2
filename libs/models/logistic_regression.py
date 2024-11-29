@@ -1,5 +1,5 @@
 import numpy as np
-from libs.libs_math import sigmoid
+from libs.math import sigmoid
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
