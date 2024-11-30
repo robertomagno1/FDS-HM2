@@ -1,13 +1,5 @@
 # Fundamental of Data Science - Homework 2
 
-## Homework Submission Instructions
-
-Deadline: November 29, 23:59
-
-Each group should submit their assignment by emailing their assigned TA before the due date. Please use the following subject line: "HW2 FDS Submission". Be sure to include a zipped file containing **only** the notebook and the `libs` folder.
-
-In the email body, include a list of all group members along with their matriculation numbers.
-
 ## Step-by-Step Guide to Copy the Repository
 
 You have two options to get a local copy of the repository: cloning it via Git or downloading it directly as a ZIP file.
