@@ -17,7 +17,7 @@ You have two options to get a local copy of the repository: cloning it via Git o
 3. **Clone the Repository**
    - Run the following command:
      ```bash
-     git clone https://github.com/Mamiglia/FDS-HW2-2024.git
+     git clone https://github.com/robertomagno1/FDS-HM2
      ```
    - This will create a folder named `FDS-HW2-2024` in your current directory, containing all the files from the repository.
 
